@@ -12,12 +12,12 @@ export default function Card(props) {
           className="card mt-3"
           style={{ width: "18rem", maxHeight: "360px" }}
         >
-          <img className="card-img-top" src={props.imgSrc} alt="Card image cap" />
+          <img className="card-img-top" style={{ width: "18rem", height: "200px" }} src={props.imgSrc} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">{props.foodName}</h5>
             <p className="card-text">{props.desc}</p>
-            <div className="container w-100">
-              <select className="m-2 h-100 bg-success rounded">
+            <div className="container" style={{ width: "18rem"}}>
+              <select className="m-2 h-100 bg-success rounded"> 
                 {Array.from(Array(6), (e, i) => {
                   return (
                     <option key={i + 1} value={i + 1}>
