@@ -114,7 +114,7 @@ export default function Home() {
                 {data.CategoryName}
               </div>
               <hr/>
-              {foodItem !== [] ? foodItem.filter((item) => (item.CategoryName == data.CategoryName) && (item.name.toLowerCase().includes(search.toLowerCase())))
+              {foodItem !== [] ? foodItem.filter((item) => (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search.toLowerCase())))
               .map(filterItems => {
                 return(
                   <div key={filterItems._id} className="col-12 col-md-6 col-lg-3 mb-2">
